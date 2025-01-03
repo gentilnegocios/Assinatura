@@ -1,134 +1,214 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
-body{
-    background: url("capa.png");
-    background-attachment: fixed;
-    overflow-x: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-html, body, .capa{
-	height: 100%;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(115deg, #5de9fd 10%, #003ecc 90%);
+}
+apa {
+  height: 100%;
 }
 
 .capa {
-	display: table;
-	width: 100%; 
+  display: table;
+  width: 100%;
 }
 
 .capa {
-	display: table;
-	width: 100%; 
+  display: table;
+  width: 100%;
 }
 
-.ballonTex{
-	position: fixed; 
-	bottom: 5%; 
-	right: 5%; 
-	width: 75px; 
-	height: 75px;
-	border: 2px solid white;
-	border-radius: 10%;
+.ballonTex {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  width: 75px;
+  height: 75px;
+  border: 2px solid white;
+  border-radius: 10%;
 }
 
 .texto-capa {
-	text-align: center;
-	color: white;
-	display: table-cell;
-	vertical-align: middle;
+  text-align: center;
+  color: white;
+  display: table-cell;
+  vertical-align: middle;
 }
 
-.texto-capa h1{
-	font-size: 100px;
-	font-weight: 900;
-	letter-spacing: -0.05em;
-	margin-bottom: 50px;
-    font-family: 'Montserrat', sans-serif;
+.texto-capa h1 {
+  font-size: 100px;
+  font-weight: 900;
+  margin-bottom: 50px;
+  font-family: "Montserrat", sans-serif;
+}
+.btn-download {
+  background-color: #89d340;
+  border-radius: 28px;
+  border: 1px solid #18ab29;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 17px;
+  padding: 8px 20px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2f6627;
+  margin-top: 30px;
+}
+.btn-download:hover {
+  background-color: #5cbf2a;
+  color: #fff;
 }
 
-.btn-custom{
-    color: white;
-	-webkit-border-radius: 200px;
-	-moz-border-radius: 200px;
-	width:  390px;
-	margin-left: 3%;
+.container {
+  max-width: 900px;
+  background: #fff;
+  width: 900px;
+  padding: 25px 40px 10px 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.btn-verde{
-    background-color: #89d340;
-    font-family: 'Montserrat', sans-serif;
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+.signature {
+  display: flex;
+  justify-content: center;
+}
+.fixed-icons {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  z-index: 1000;
 }
 
-.btn-verde:hover{
-    background-color: #181f25;
-    color: white;
+.fixed-icons img {
+  width: auto;
+  height: 80px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.btn-branco{
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    background-color: #0c6984;
+.fixed-icons img:hover {
+  transform: scale(1.1);
+}
+section {
+  height: 100;
 }
 
-.btn-branco:hover{
-    color: #181f25;
-	background-color: white
+section#colaborador label {
+  color: #07074d;
+  font-size: 14px;
+  line-height: 24px;
+  padding-left: 20px;
 }
 
-section{
-	height: 100;
+section#colaborador form {
+  color: white;
+  font-weight: bolder;
+  padding-top: auto;
+  max-width: 100%;
 }
 
-section#colaborador{
-    background-color: #89d340;
-    height: 100%;
-    width: 100%;
-    box-shadow: 5px 5px 5px 10px rgba(0, 0, 0, 0.5);
+section#colaborador input {
+  background-color: white;
+  color: black;
+  font-weight: bolder;
 }
 
-section#colaborador label{
-    color: white;
+input#nome {
+  size: 300px;
 }
 
-img{
-   border: 5px solid black;
+section#lider {
+  height: 100%;
+  width: 100%;
+  background-color: #0c6984;
+  box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
-section#colaborador form{
-	color: white;
-	font-weight: bolder;
-	padding-top: auto;
+section#lider form {
+  color: white;
+  font-weight: bolder;
+  padding-top: 5%;
 }
 
-section#colaborador input{
-	background-color: white;
-	color: black;
-	font-weight: bolder;
+section#lider input {
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+}
+@media (max-width: 1024px) {
+  /* Tablets */
+  .container {
+    max-width: 80%;
+    width: 80%;
+    padding: 20px 30px 10px 30px;
+  }
+  .fixed-icons {
+    bottom: 15px;
+    right: 30px;
+    gap: 30px;
+  }
+
+  .fixed-icons img {
+    height: 70px;
+  }
 }
 
-section#colaborador button{
-	background-color: #0c6984;
+@media (max-width: 768px) {
+  /* Celulares grandes */
+  .container {
+    max-width: 90%;
+    width: 90%;
+    padding: 15px 20px 10px 20px;
+  }
+  .fixed-icons {
+    bottom: 10px;
+    right: 20px;
+    gap: 20px;
+  }
+
+  .fixed-icons img {
+    height: 60px;
+  }
 }
 
-input#nome{
-	size: 300px;
+@media (max-width: 480px) {
+  /* Celulares pequenos */
+  .container {
+    max-width: 95%;
+    width: 95%;
+    padding: 10px 15px 10px 15px;
+  }
+  .fixed-icons {
+    bottom: 10px;
+    right: 15px;
+    gap: 15px;
+  }
+  .fixed-icons img {
+    height: 50px;
+  }
 }
-
-section#lider{
-    height: 100%;
-    width: 100%;
-    background-color: #0c6984;
-    box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.5);
-}
-
-section#lider form{
-	color: white;
-	font-weight: bolder;
-	padding-top: 5%;
-}
-
-section#lider input{
-	background-color: white;
-	color: black;
-	font-weight: bolder;
-}
-
