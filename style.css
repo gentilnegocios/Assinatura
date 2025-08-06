@@ -14,7 +14,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(115deg, #5de9fd 10%, #003ecc 90%);
+  background: linear-gradient(135deg, #0e2d61 0%, #017a82 100%);
 }
 
 .img-fluid {
@@ -23,13 +23,14 @@ body {
   border-radius: 8px;
 }
 
+
 .btn-download {
-  background-color: #89d340;
+  background-color: #0c1f4d;
   border-radius: 28px;
-  border: 1px solid #18ab29;
+  border: 1px solid #0a183a;
   display: inline-block;
   cursor: pointer;
-  color: #ffffff;
+  color: #fff;
   font-size: 17px;
   padding: 8px 20px;
   text-decoration: none;
@@ -37,7 +38,7 @@ body {
   margin-top: 30px;
 }
 .btn-download:hover {
-  background-color: #5cbf2a;
+  background-color: #16478c;
   color: #fff;
 }
 
