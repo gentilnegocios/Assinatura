@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- FAVICON -->
-    <link rel="icon" href="./_img/favicon-tex.png" />
+    <link rel="icon" href="https://github.com/gentilnegocios/Assinatura/blob/main/_img/favicon-tex.png" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -229,6 +229,9 @@
 
     //Configuração de campo de telefone
     function setTelefone(telefoneColaborador) {
+
+    if (!telefoneColaborador.trim()) return;
+
     ctx.globalCompositeOperation = "destination-in";
     ctx.globalCompositeOperation = "source-over";
     ctx.font = "13px Montserrat, sans-serif";
