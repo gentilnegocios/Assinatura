@@ -82,7 +82,7 @@
                     class="form-control"
                     placeholder="(XX) XXXXX-XXXX"
                     id="telefoneColaborador"
-                    maxlength="11"
+                    maxlength="20"
                   />
                 </div>
               </div>
@@ -234,19 +234,34 @@
 
     //Configuração de campo de telefone
     function setTelefone(telefoneColaborador) {
-      ctx.globalCompositeOperation = "destination-in";
-      ctx.globalCompositeOperation = "source-over";
-      ctx.font = "13px Montserrat, sans-serif";
-      ctx.textAlign = "left";
-      ctx.fillStyle = "white";
-      ctx.textBaseline = "hanging";
-      telefoneColaborador = telefoneColaborador.replace(/\D/g, ""); //Remove tudo o que não é dígito
-      telefoneColaborador = telefoneColaborador.replace(
-        /^(\d{2})(\d{5})(\d{4}).*/,
-        "($1) $2-$3"
-      ); //Adiciona o parentese e hífen ao número
-      ctx.fillText(telefoneColaborador, 240, 143); //Definição de onde o texto ira iniciar nas coordenadas X e Y
+    ctx.globalCompositeOperation = "destination-in";
+    ctx.globalCompositeOperation = "source-over";
+    ctx.font = "13px Montserrat, sans-serif";
+    ctx.textAlign = "left";
+    ctx.fillStyle = "white";
+    ctx.textBaseline = "hanging";
+
+    // Remove tudo que não for número
+    let numeros = telefoneColaborador.replace(/\D/g, "");
+
+    // Se o número tiver 10 dígitos (sem o 9), adiciona o 9
+    if (numeros.length === 10) {
+      numeros = numeros.slice(0, 2) + "9" + numeros.slice(2);
     }
+
+    // Preenche com "_" se tiver menos de 11 dígitos
+    const numeroCompletado = numeros.padEnd(11, "_");
+
+    // Monta visualmente com o traço no lugar certo
+    const formatado = numeroCompletado.replace(
+      /^(\d{2}|__)(\d{5}|_____)(\d{4}|____)/,
+      "($1) $2-$3"
+    );
+
+    ctx.fillText(formatado, 240, 143);
+  }
+
+
 
     //Máscara de telefone
     //Disponível em: https://codepen.io/adelmodias/pen/aKVwoE
